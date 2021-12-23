@@ -8,10 +8,19 @@ import {
   Alert,
 } from 'react-native';
 import React, {Component} from 'react';
+import Content from './Content';
+import Content2 from './Content2';
+import Content3 from './Content3';
+import Connect from './Connect';
 
 function App() {
   return (
-    <View style={{flex: 1, justifyContent: 'space-between'}}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'space-between',
+        backgroundColor: '#f2f2f2',
+      }}>
       <ScrollView>
         <View
           style={{
@@ -161,7 +170,6 @@ function App() {
           {/* header end */}
 
           {/* menu icon start */}
-
           <View style={{marginHorizontal: 15, marginTop: 20}}>
             <View style={{width: '100%', padding: 20}}>
               <View
@@ -362,6 +370,15 @@ function App() {
           </View>
           {/* menu icon end */}
         </View>
+        {/* start content */}
+        <Content />
+
+        <Connect
+          judul="Get In Touch"
+          text="Bergabung lah dengan kami sekarang. nikmati berbagai tawaran menarik"
+          sideTitle="Coba Sekarang !"
+        />
+        {/* end content */}
       </ScrollView>
       <View
         style={{
