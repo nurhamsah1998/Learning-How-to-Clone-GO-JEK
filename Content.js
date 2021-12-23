@@ -30,9 +30,13 @@ export default function Content() {
                 </View>
                 <View
                   style={
-                    item.button === 'left' ? style.btnLeft : style.btnRight
+                    item.button === 'left'
+                      ? style.btnLeft
+                      : item.button === 'center'
+                      ? style.btnCenter
+                      : style.btnRight
                   }>
-                  <Button color="#44cd08" onPress={btn} title="Read More" />
+                  <Button color={item.b} onPress={btn} title="Read More" />
                 </View>
               </View>
             </View>
@@ -81,6 +85,12 @@ const style = {
     width: 100,
     marginLeft: 10,
     alignSelf: 'flex-end',
+    paddingHorizontal: -20,
+  },
+  btnCenter: {
+    width: 100,
+    marginLeft: 10,
+    alignSelf: 'center',
     paddingHorizontal: -20,
   },
 };
